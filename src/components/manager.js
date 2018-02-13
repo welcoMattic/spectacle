@@ -193,6 +193,7 @@ export class Manager extends Component {
     const event = window.event ? window.event : e;
 
     if (
+      event.keyCode === 40 ||
       event.keyCode === 37 ||
       event.keyCode === 33 ||
       (event.keyCode === 32 && event.shiftKey)
@@ -200,6 +201,7 @@ export class Manager extends Component {
       this._prevSlide();
       this._stopAutoplay();
     } else if (
+      event.keyCode === 38 ||
       event.keyCode === 39 ||
       event.keyCode === 34 ||
       (event.keyCode === 32 && !event.shiftKey)
